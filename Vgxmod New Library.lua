@@ -4875,7 +4875,7 @@ Tab:AddSection({
 Tab:AddDropdown({
     Name     = "UI Size",
     Options  = {"Small", "Medium", "Large"},
-    Default  = savedSize,
+    Default  = "Medium",
     Flag = "UISize",
     Callback = function(v)
         local offset = isMobile and -200 or 0
@@ -4893,7 +4893,7 @@ Tab:AddDropdown({
 Tab:AddDropdown({
     Name = "UI Theme",
     Options = {"Red", "Darker", "Dark", "Purple","NeonBlue", "Sunset", "Ocean", "RoseGold", "Matrix", "Green", "Orange", "Pink", "Gold", "Cyan"},
-    Default = splib.Save.Theme or "Dark",
+    Default = splib.Save.Theme or "Darker",
     Callback = function(selectedTheme)
         splib:SetTheme(selectedTheme)
         splib.Save.Theme = selectedTheme
